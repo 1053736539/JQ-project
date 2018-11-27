@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<script type="text/javascript">
+		$(function() {
+			$("li").click(function() {
+				$(this).find(".content").slideToggle(800);
+				//				console.log($(this).children()[1])
+				//				if($(this).hasClass("open")){
+				//					$(this).removeClass("open");
+				//				}else{
+				//					$(this).addClass("open").siblings().removeClass("open");
+				//				}
+				//				$(this).addClass("open").siblings().removeClass("open");
+			});
+		});
+	</script>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		
+		.content {
+			display: none;
+		}
+		
+		.open>.content {
+			display: block;
+		}
+	</style>
+
+	<body>
+		<div class="flex_c_c w_c100">
+			<div class="">
+				<ul>
+					<li>
+						<div class="font_20 color_0 bold">1标题</div>
+						<div class="flex_t_l content pad_t10 pad_b10">
+							<div><img class="w_80 h_120" src="https://edu-image.nosdn.127.net/578DDE20F7647AC89376A062090D0279.jpg?imageView&quality=100&thumbnail=223y124" alt="" /></div>
+							<div class="w_100">USA合法化撒静待花开金沙江旷达科技撒</div>
+						</div>
+					</li>
+					<li>
+						<div class="font_20 color_0 bold">1标题</div>
+						<div class="flex_t_l content pad_t10 pad_b10">
+							<div><img class="w_80 h_120" src="https://edu-image.nosdn.127.net/578DDE20F7647AC89376A062090D0279.jpg?imageView&quality=100&thumbnail=223y124" alt="" /></div>
+							<div class="w_100">USA合法化撒静待花开金沙江旷达科技撒</div>
+						</div>
+					</li>
+					<li>
+						<div class="font_20 color_0 bold">1标题</div>
+						<div class="flex_t_l content pad_t10 pad_b10">
+							<div><img class="w_80 h_120" src="https://edu-image.nosdn.127.net/578DDE20F7647AC89376A062090D0279.jpg?imageView&quality=100&thumbnail=223y124" alt="" /></div>
+							<div class="w_100">USA合法化撒静待花开金沙江旷达科技撒</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+
+</html>

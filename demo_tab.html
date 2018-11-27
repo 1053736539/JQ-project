@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		.w_cbox {
+			width: 600px;
+		}
+		
+		.nav li {
+			float: left;
+			padding: 10px 35px;
+			font-size: 16px;
+			color: #000000;
+		}
+		
+		.nav li.on {
+			background: palevioletred;
+			color: #fff;
+			;
+		}
+		
+		.content li {
+			display: none;
+		}
+		
+		.content li.show {
+			display: block;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			/*
+			$(".nav>li").click(function() {
+				$(this).addClass("on");
+				$(this).siblings().removeClass("on");
+				var index=$(this).index();
+				var $li=$(".content>li").eq(index);
+				$li.siblings().removeClass("show");
+				$li.addClass("show")
+
+			})*/
+			
+			$(".nav>li").click(function() {
+				$(this).addClass("on").siblings().removeClass("on");
+				$('.content li').hide();
+				$('.content li').eq($(this).index()).show()
+
+			})
+		})
+	</script>
+
+	<body>
+		<div class="w_c100 whitebg ">
+			<div class="w_1200 pad_t50 auto bg_ea pad_b50">
+				<div class="w_cbox auto">
+					<ul class="nav clearfix">
+						<li class="on">首页1</li>
+						<li>首页2</li>
+						<li>首页3</li>
+						<li>首页4</li>
+						<li>首页5</li>
+					</ul>
+					<ul class="content">
+						<li class="show"><img class="w_c100 black" src="images/fast_enter01.png" /></li>
+						<li class=""><img class="w_c100 black" src="images/fast_enter01_0731.png" /></li>
+						<li class=""><img class="w_c100 black" src="images/fast_enter02_0731.png" /></li>
+						<li class=""><img class="w_c100 black" src="images/fast_enter02.png" /></li>
+						<li class=""><img class="w_c100 black" src="images/fast_enter03.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

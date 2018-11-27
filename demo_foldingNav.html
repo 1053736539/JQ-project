@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		.two_nav {
+			display: none;
+			background: #FF0000;
+			color: #fff;
+		}
+		
+		.two_nav li {
+			padding: 5px 0;
+			border-bottom: 1px solid #fff;
+		}
+		
+		.one_nav {
+			width: 300px;
+		}
+		
+		.one_navlist {
+			padding: 10px 0;
+			border: 1px solid #000000;
+			border-bottom: none;
+		}
+		
+		.one_navlist span {
+			float: right;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: url(images/arrow_right_black.png)no-repeat center;
+		}
+		
+		.one_navlist:last-child {
+			border-bottom: 1px solid #000000;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+		
+		.one_navlist:first-child {
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		
+		.current span {
+			transform: rotate(90deg);
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$('.one_nav>li').click(function() {
+				var $twoNav = $(this).children(".two_nav");
+				var otherNav = $(this).siblings().children(".two_nav");
+				if($(this).hasClass("current")){
+					$twoNav.slideUp(1000);
+					$(this).removeClass("current");
+				}else{
+					$twoNav.slideDown(1000);
+					otherNav.slideUp(1000);
+					$(this).siblings().removeClass("current");
+					$(this).addClass("current");
+				}
+				
+			})
+		})
+	</script>
+
+	<body>
+		<div class="w_1200 auto pad_t50">
+			<ul class="one_nav">
+				<li class="one_navlist">
+					<div style="" class="clearfix" id="">
+						一级菜单<span></span>
+					</div>
+					<ul class="two_nav">
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li class="one_navlist">
+					<div style="" class="clearfix" id="">
+						一级菜单<span></span>
+					</div>
+					<ul class="two_nav">
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li class="one_navlist">
+					<div style="" class="clearfix" id="">
+						一级菜单<span></span>
+					</div>
+					<ul class="two_nav">
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li class="one_navlist">
+					<div style="" class="clearfix" id="">
+						一级菜单<span></span>
+					</div>
+					<ul class="two_nav">
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li class="one_navlist">
+					<div style="" class="clearfix" id="">
+						一级菜单<span></span>
+					</div>
+					<ul class="two_nav">
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
